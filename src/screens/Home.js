@@ -5,11 +5,12 @@ import Logo from '../../assets/mcologo.png';
 import React, {useState, useEffect} from 'react';
 import CustomInput from '../components/CustomInput';
 import ButtonDesign from '../components/ButtonDesign';
+import { Alert } from 'react-native';
 
 const Generate = () => {
   fetch('https://animechan.vercel.app/api/random')
   .then(response => response.json())
-  .then(quote => alert(quote.anime+"\n"+"\n"+quote.quote+"-"+ quote.character))
+  .then(quote => Alert.alert("Seize the day!", quote.anime+"\n"+"\n"+quote.quote+" -"+ quote.character)) 
   
 };
 

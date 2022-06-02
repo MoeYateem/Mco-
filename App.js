@@ -4,12 +4,13 @@ import React from 'react';
 import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
 import LogIn from './src/screens/LogIn';
 import Home from './src/screens/Home';
+import Anime from './src/components/Anime';
 //import Navigation from './src/navigation';
 
 const App = () => {
   return (
     <View >
-      <Home />
+      <LogIn />
     </View>
   );
 };
