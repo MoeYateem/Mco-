@@ -1,4 +1,5 @@
-
+//import 'react-native-gesture-handler';
+//import { useNavigation } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import useWindowDimensions from 'react-native/Libraries/Utilities/useWindowDimensions';
@@ -6,12 +7,13 @@ import Logo from '../../assets/mcologo.png';
 import React, {useState} from 'react';
 import CustomInput from '../components/CustomInput';
 import ButtonDesign from '../components/ButtonDesign';
-import { useNavigation } from '@react-navigation/native';
+
 
 const LogIn =() => {
     const {height} = useWindowDimensions();
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    //const navigation = useNavigation();
     async function loginUser(credentials){
       try {
           return fetch('http://34.245.213.76:3000/auth/signin', {
